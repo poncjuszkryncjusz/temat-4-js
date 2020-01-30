@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    liczba rzutów: <input id="liczba"><br>
+    suma oczek: <input type="text" readonly id="wynik">
+    <input type="button" value="sprawdź" id="przycisk">
+    <hr>
+    <script>
+        function suma(liczbarzutow) {
+            let suma = 0;
+            for (let i = 0; i < liczbarzutow; ++i) {
+                console.log(suma)
+                suma += Math.floor(Math.random() * 6) + 1
+            }
+            return suma
+        }
+
+
+        document.getElementById("przycisk").onclick = function () {
+
+            let x = parseInt(document.getElementById("liczba").value)
+            let y = suma(x)
+            document.getElementById("wynik").value = y
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="check">sprawdz to człowieku</button>
+    <input type="number" id="x">
+    <input type="number" id="y">
+    <span id="read"></span>
+
+
+    <script>
+        const x = document.getElementById('x');
+        const y = document.getElementById("y")
+        const check = document.getElementById('check');
+        const read = document.getElementById('read');
+        check.onclick = myFuction;
+
+        function myFuction() {
+            const valueX = parseInt(x.value);
+            const valueY = parseInt(y.value);
+            if (valueX < valueY) {
+                read.textContent = " X < Y "
+            } else if (valueX > valueY) {
+                read.textContent = " X > Y "
+            } else if (valueX === valueY) {
+                read.textContent = "są równe"
+            } else {
+                read.textContent = "to nie liczba"
+            }
+        }
+    </script>
+
+</body>
+
+</html>

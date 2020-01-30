@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <button id='logIn'>Zaloguj</button>
+        <button id='wyloguj'>wyloguj</button>
+
+        <span id='container'></span>
+        <script>
+            const button1 = document.getElementById('logIn');
+            const button3 = document.getElementById('wyloguj');
+
+            const read = document.getElementById('container');
+            button1.onclick = start;
+            button3.onclick = start3;
+            let toogleFlag = true;
+
+            function start() {
+                if (toogleFlag) {
+                    read.textContent = "Rozpoczynamy prace";
+                }
+            }
+
+            function start3() {
+                if (toogleFlag) {
+                    read.textContent = "Do zobaczenia";
+                }
+            }
+
+            /*druga czesc zadania z jednym przyciskiem :
+            
+            const button1 = document.getElementById('logIn');
+const read = document.getElementById('container');
+button1.onclick = start;
+let toogleFlag = false;
+function start() {
+    if (toogleFlag) {
+        read.textContent = "Do zobaczenia";
+    } else {
+        read.textContent = "Rozpoczynamy prace";
+    }
+    toogleFlag = !toogleFlag
+}*/
+        </script>
+    </body>
+
+    </html>
+</body>
+
+</html>

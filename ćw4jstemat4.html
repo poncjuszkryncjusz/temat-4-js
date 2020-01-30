@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <input id="random_number" type="text">
+
+    <button id="go" onclick="table()">Check</button>
+
+    <input id="read" type="text" readonly>
+
+
+    <script>
+
+const button_go = document.getElementById("go");
+const input_random = document.getElementById("random_number");
+const input_read = document.getElementById("read");
+
+
+function table() {
+    let x = input_random.value;
+    const table = x.split(" ");
+    let suma = 0;
+    console.log(table);
+
+    for(let i = 0; i < table.length; i++) {
+        const y = parseInt(table[i]);
+        if(y % 2 !== 0) {
+            suma += y;
+        }
+    }
+
+    input_read.value = suma;
+
+}
+
+    </script>
+</body>
+
+</html>

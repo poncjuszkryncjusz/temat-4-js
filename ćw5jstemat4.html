@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <label for="numbers">podaj liczby:</label>
+    <input id="numbers" type="text">
+
+    <label for="read">wynik:</label>
+    <input id="read" type="text" readonly>
+
+    <label for="sumUnder">sumuj ponizej:</label>
+    <input id="sumUnder" type="text">
+
+    <button id="go" onclick="table()">jazda z tematem</button>
+    <script>
+
+        const input_numbers = document.getElementById("numbers");
+        const input_read = document.getElementById("read");
+        const button = document.getElementById("go");
+        const input_sumUnder = document.getElementById("sumUnder");
+
+        function table() {
+            const x = input_numbers.value;
+            let sum = 0;
+            const table = x.split(" ");
+
+            for (let i = 0; i < table.length; i++) {
+                const z = parseInt(table[i]);
+                if (z < input_sumUnder.value) {
+                    sum += z;
+                }
+            }
+            input_read.value = sum;
+        }
+    </script>
+
+</body>
+
+</html>

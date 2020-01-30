@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <button id='oneUp'>oneUp</button>
+        <button id="oneDown">oneDown</button>
+        <span id='container'>0</span>
+        <script>
+            const licznik = document.getElementById("container");
+            const oneUp = document.getElementById("oneUp");
+            const oneDown = document.getElementById("oneDown");
+            let value = parseInt(licznik.textContent);
+            oneUp.onclick = myFunction;
+            oneDown.onclick = myFunction2;
+
+            function myFunction() {
+                if (value < 100) {
+                    value = value + 1;
+                    licznik.textContent = value;
+                }
+            }
+
+            function myFunction2() {
+                if (value > 0) {
+                    value = value - 1;
+                    licznik.textContent = value;
+                }
+            }
+        </script>
+    </body>
+
+    </html>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id='check'>check</button>
+    <input type='text' id='container'>
+    <input type="text" id="container2">
+    <span id="read"></span>
+    <span id="read2"></span>
+    <script>
+        const container = document.getElementById('container');
+        const check = document.getElementById('check');
+        const read = document.getElementById('read');
+        const read2 = document.getElementById('read2');
+        check.onclick = checkIt;
+
+        function checkIt() {
+            let value = parseInt(container.value);
+            console.log(value);
+            if (value % 2 == 0) {
+                read.textContent = 'even';
+            } else {
+                read.textContent = 'odd';
+            }
+            if (value > 0) {
+                read2.textContent = 'dodatnia';
+            } else if (value < 0) {
+                read2.textContent = 'ujemna'
+            } else if (value === 0) {
+                read2.textContent = " rowne zero"
+            } else {
+                read2.textContent = 'value is not a number';
+            }
+        }
+    </script>
+</body>
+
+</html>

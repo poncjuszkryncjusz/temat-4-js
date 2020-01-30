@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    podaj liczbę: <input id="liczba"><br>
+    wartość (przysta/nieparzysta): <div id="wynik"></div>
+    <input type="button" value="sprawdź" id="przycisk">
+    <hr>
+
+    <script>
+    document.getElementById("przycisk").onclick = function () {
+        let liczba = parseInt(document.getElementById("liczba").value);
+
+        if (isNaN(liczba)) {
+            return alert("to nie jest liczba");
+        }
+
+        if (liczba % 2 === 0) {
+            document.getElementById('wynik').innerHTML = 'parzysta';
+        } else {
+            document.getElementById('wynik').innerHTML = 'nieparzysta';
+        }
+    }
+</script>
+
+
+</body>
+
+</html>
